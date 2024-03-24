@@ -11,7 +11,7 @@ def test_fill_and_send():
     browser.all('[type="radio"]').should(have.size(3))
     browser.element('[for="gender-radio-1"]').should(have.text('Male')).click()
     browser.element('#userNumber').should(be.blank).type('9112345678')
-    # browser.element('#dateOfBirthInput').perform(command.select_all).type('28 Jul 1992').press_enter()
+    # browser.element('#dateOfBirthInput').perform(command.select_all).type('31 Jul 1992').press_enter()
     browser.element('#dateOfBirthInput').click()
     browser.element('.react-datepicker__year-select').click().element('option[value="1992"]').click()
     browser.element('.react-datepicker__month-select').click().element('option[value="6"]').click()
